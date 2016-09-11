@@ -4,8 +4,9 @@ use EnriqueSegura\Counter;
 
 class CounterTest extends PHPUnit_Framework_TestCase
 {
-    public function testMock()
+    public function testOutputIsEmptyWhenNoNumbersAdded()
     {
-        $this->assertInstanceOf('\EnriqueSegura\Counter', new Counter);
+        $counter = new Counter();
+        $this->assertEmpty($counter->getCounter());
     }
 }
