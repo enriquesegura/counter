@@ -8,7 +8,14 @@ class Counter
     private $numbers = array();
     public function getCounter()
     {
-        return $this->numbers;
+        $result = '';
+        foreach ($this->numbers as $number => $count){
+            $result .= "$number: $count, ";
+        }
+        $result= substr($result, 0, -2);
+
+        return $result;
+
     }
 
     public function count($number)
